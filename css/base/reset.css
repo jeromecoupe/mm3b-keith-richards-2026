@@ -1,0 +1,16 @@
+/* ===================================
+=reset
+=================================== */
+
+/*
+- Les navigateurs mettent des marges en block start par defaut
+- Ces marges sont souvent proportionnelles aux tailles de polices (différentes pour h1 et p par exemple)
+- Pas pratique dans un contexte responsive dans lequel des éléments sont d'abord les uns en dessous des autres puis à côté les uns des autres
+- Supprimer les marges en block start fait que les éléments sont bien sur la même ligens quand ils passent les uns à côté des autres.
+*/
+
+*, 
+*::before, 
+*::after {
+  margin-block-start: 0;
+}

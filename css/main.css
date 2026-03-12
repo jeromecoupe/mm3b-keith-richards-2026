@@ -6,6 +6,7 @@
 @import "settings/typography.css" layer(settings);
 
 /* BASE: tous les styles CSS qui ne contiennent pas de classes mis juste des sélecteurs de type ou généraux */
+@import "base/reset.css" layer(base);
 @import "base/fonts.css" layer(base);
 @import "base/body.css" layer(base);
 @import "base/html.css" layer(base);
