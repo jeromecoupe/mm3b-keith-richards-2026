@@ -2,4 +2,58 @@
 =modular body
 =================================== */
 
-/* @TODO */
+/*
+- modularbody a toujours une grille de 12
+- impact sur les enfants direct qui sont des div (avec trois classes .modularbody-full, .modularbody-text, .modularbody-quote)
+- pour différents breakpoints (largeur de viewports) on va faire des media queries avec des placements de ces grid tem dans la grille de 12 colonnes. Ici on va faire du placement en utilisant les ligens de la grille (les lignes commençent à 1 et se terminent à 13 (ou -1). 
+*/
+
+.modularbody {
+  --modularbody-colgap: 18px;
+  --modularbody-rowgap: clamp(36px, 4vi, 60px);
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--modularbody-rowgap) var(--modularbody-colgap);
+}
+
+/*
+positionnement par lignes
+trois façon de faire
+
+- ligne de départ / ligne d'arrivée
+  grid-column: 1 / 13;
+- ligne de départ / ligne d'arrivée (ligne négatives)
+  grid-column: 1 / -1;
+- ligne de départ / span [nombre de colonnes]
+  grid-column: 1 / span 12;
+*/
+
+.modularbody-full {
+  grid-column: 1 / -1; 
+}
+
+.modularbody-quote {
+  grid-column: 1 / -1; 
+
+  @media (width >= 750px) {
+    grid-column: 1 / 12;
+  }
+
+  @media (width >= 1024px) {
+    grid-column: 2 / -2;
+  }
+}
+
+.modularbody-text {
+  grid-column: 1 / -1; 
+
+  @media (width >= 750px) {
+    grid-column: 3 / -1;
+  }
+
+  @media (width >= 1024px) {
+    grid-column: 5 / -2;
+  }
+}
+
