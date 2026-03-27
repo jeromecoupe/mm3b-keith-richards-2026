@@ -31,6 +31,8 @@
 @import "components/footernav.css" layer(components);
 @import "components/split.css" layer(components);
 @import "components/section.css" layer(components);
+@import "components/lists.css" layer(components);
+@import "components/office.css" layer(components);
 
 /* UTILITIES: classes utilitaires */
 @import "utilities/visuallyhidden.css" layer(utilities);

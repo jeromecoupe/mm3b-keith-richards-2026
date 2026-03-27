@@ -11,6 +11,6 @@
   margin: 0 auto;
 
   @media (width >= 750px) {
-    --container-padding: 30px;
+    --container-padding: 36px;
   }
 }

@@ -11,7 +11,7 @@
 
 .sitefooter-main {
   padding-block: 60px;
-  border-block-start: 1px solid hsl(from white h s l / 18%);
+  border-block-start: 1px solid hsl(from white h s l / 6%);
 
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

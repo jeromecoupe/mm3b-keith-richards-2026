@@ -3,8 +3,36 @@
 =================================== */
 
 a {
-  color: inherit;
+  --link-color: inherit;
+  --link-underline-color: color-mix(var(--color-accent), transparent 50%);
+
+  color: var(--link-color);
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
-  text-underline-offset: 0.3ch;
+  text-decoration-color: var(--link-underline-color);
+  text-underline-offset: 0.48ch;
+  text-decoration-thickness: 1px;
+
+  &:focus-visible,
+  &:hover {
+    --link-underline-color: var(--color-accent);
+  }
+}
+
+/* ===================================
+=links in titles
+=================================== */
+
+:where(h1, h2, h3, h4, h5, h6) {
+  & > a {
+    --link-color: inherit;
+
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:focus-visible,
+    &:hover {
+      --link-color: var(--color-accent);
+      text-decoration: none;
+    }
+  }
 }

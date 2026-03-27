@@ -3,26 +3,13 @@
 =================================== */
 
 .bigtitle {
-  --fontsize-bigtitle: clamp(41 / 16 * 1rem, 1.935rem + 2.87vi, 74 / 16 * 1rem);
-
-  font-weight: 450;
-  line-height: 1.32;
-  font-family: var(--fontstack-alt);
-  font-size: var(--fontsize-bigtitle);
-  color: white;
-}
-
-.pagetitle {
-  --fontsize-pagetitle: clamp(
-    52 / 16 * 1rem,
-    2.66rem + 2.696vi,
-    83 / 16 * 1rem
-  );
+  --fontsize-bigtitle: clamp(36 / 16 * 1rem, 1.519rem + 2.34vi, 58 / 16 * 1rem);
+  --fontsize-bigtitle: 58px;
 
   font-weight: 400;
-  line-height: 1.32;
+  line-height: 1.26;
   font-family: var(--fontstack-alt);
-  font-size: var(--fontsize-pagetitle);
+  font-size: var(--fontsize-bigtitle);
   color: white;
 }
 
